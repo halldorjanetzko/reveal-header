@@ -58,7 +58,8 @@ function header() {
   
   function hide_from_title_slide(element) {
       Reveal.on( 'slidechanged' , event => {
-        if (event.currentSlide.matches('#title-slide')) {
+        console.log(event.currentSlide)
+        if (event.currentSlide.id === 'title-slide') {
           element.style.visibility = 'hidden';
         } else {
           element.style.visibility = 'visible';
